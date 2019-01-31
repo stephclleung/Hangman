@@ -1,0 +1,1 @@
+/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/cmake-build-debug/CMakeFiles/HangMan.dir
