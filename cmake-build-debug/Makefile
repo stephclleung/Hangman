@@ -150,32 +150,32 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-systemMessages.o: systemMessages.cpp.o
+theMan.o: theMan.cpp.o
 
-.PHONY : systemMessages.o
+.PHONY : theMan.o
 
 # target to build an object file
-systemMessages.cpp.o:
-	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/systemMessages.cpp.o
-.PHONY : systemMessages.cpp.o
+theMan.cpp.o:
+	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/theMan.cpp.o
+.PHONY : theMan.cpp.o
 
-systemMessages.i: systemMessages.cpp.i
+theMan.i: theMan.cpp.i
 
-.PHONY : systemMessages.i
+.PHONY : theMan.i
 
 # target to preprocess a source file
-systemMessages.cpp.i:
-	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/systemMessages.cpp.i
-.PHONY : systemMessages.cpp.i
+theMan.cpp.i:
+	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/theMan.cpp.i
+.PHONY : theMan.cpp.i
 
-systemMessages.s: systemMessages.cpp.s
+theMan.s: theMan.cpp.s
 
-.PHONY : systemMessages.s
+.PHONY : theMan.s
 
 # target to generate assembly for a file
-systemMessages.cpp.s:
-	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/systemMessages.cpp.s
-.PHONY : systemMessages.cpp.s
+theMan.cpp.s:
+	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/theMan.cpp.s
+.PHONY : theMan.cpp.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... systemMessages.o"
-	@echo "... systemMessages.i"
-	@echo "... systemMessages.s"
+	@echo "... theMan.o"
+	@echo "... theMan.i"
+	@echo "... theMan.s"
 .PHONY : help
 
 

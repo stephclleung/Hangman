@@ -83,10 +83,10 @@
       <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/main.cpp">
          <Option target="HangMan"/>
       </Unit>
-      <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/systemMessages.cpp">
+      <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.cpp">
          <Option target="HangMan"/>
       </Unit>
-      <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/systemMessages.hpp">
+      <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.hpp">
          <Option target="HangMan"/>
       </Unit>
       <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/CMakeLists.txt">

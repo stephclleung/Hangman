@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <vector>
 #include <string>
-#include "systemMessages.hpp"
+#include "theMan.hpp"
 
 using std::cout;
 using std::cin;
@@ -11,9 +11,13 @@ using std::string;
 using std::getline;
 using std::endl;
 
+
 int main() {
 
     vector<string> word_choice = {"apples", "bananas"};
+
+
+    hangManSetup();
 
     //process one word
     string choice = word_choice[1];

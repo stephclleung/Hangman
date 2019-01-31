@@ -1,9 +1,0 @@
-//
-// Created by Sleung on 1/31/2019.
-//
-
-#ifndef HANGMAN_SYSTEMMESSAGES_HPP
-#define HANGMAN_SYSTEMMESSAGES_HPP
-
-#endif //HANGMAN_SYSTEMMESSAGES_HPP
-

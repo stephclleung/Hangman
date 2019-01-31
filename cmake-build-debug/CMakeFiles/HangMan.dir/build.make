@@ -81,40 +81,40 @@ CMakeFiles/HangMan.dir/main.cpp.o.provides: CMakeFiles/HangMan.dir/main.cpp.o.re
 CMakeFiles/HangMan.dir/main.cpp.o.provides.build: CMakeFiles/HangMan.dir/main.cpp.o
 
 
-CMakeFiles/HangMan.dir/systemMessages.cpp.o: CMakeFiles/HangMan.dir/flags.make
-CMakeFiles/HangMan.dir/systemMessages.cpp.o: ../systemMessages.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HangMan.dir/systemMessages.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HangMan.dir/systemMessages.cpp.o -c /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/systemMessages.cpp
+CMakeFiles/HangMan.dir/theMan.cpp.o: CMakeFiles/HangMan.dir/flags.make
+CMakeFiles/HangMan.dir/theMan.cpp.o: ../theMan.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HangMan.dir/theMan.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HangMan.dir/theMan.cpp.o -c /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.cpp
 
-CMakeFiles/HangMan.dir/systemMessages.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HangMan.dir/systemMessages.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/systemMessages.cpp > CMakeFiles/HangMan.dir/systemMessages.cpp.i
+CMakeFiles/HangMan.dir/theMan.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HangMan.dir/theMan.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -E /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.cpp > CMakeFiles/HangMan.dir/theMan.cpp.i
 
-CMakeFiles/HangMan.dir/systemMessages.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HangMan.dir/systemMessages.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/systemMessages.cpp -o CMakeFiles/HangMan.dir/systemMessages.cpp.s
+CMakeFiles/HangMan.dir/theMan.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HangMan.dir/theMan.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_FLAGS) -S /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.cpp -o CMakeFiles/HangMan.dir/theMan.cpp.s
 
-CMakeFiles/HangMan.dir/systemMessages.cpp.o.requires:
+CMakeFiles/HangMan.dir/theMan.cpp.o.requires:
 
-.PHONY : CMakeFiles/HangMan.dir/systemMessages.cpp.o.requires
+.PHONY : CMakeFiles/HangMan.dir/theMan.cpp.o.requires
 
-CMakeFiles/HangMan.dir/systemMessages.cpp.o.provides: CMakeFiles/HangMan.dir/systemMessages.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/systemMessages.cpp.o.provides.build
-.PHONY : CMakeFiles/HangMan.dir/systemMessages.cpp.o.provides
+CMakeFiles/HangMan.dir/theMan.cpp.o.provides: CMakeFiles/HangMan.dir/theMan.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/theMan.cpp.o.provides.build
+.PHONY : CMakeFiles/HangMan.dir/theMan.cpp.o.provides
 
-CMakeFiles/HangMan.dir/systemMessages.cpp.o.provides.build: CMakeFiles/HangMan.dir/systemMessages.cpp.o
+CMakeFiles/HangMan.dir/theMan.cpp.o.provides.build: CMakeFiles/HangMan.dir/theMan.cpp.o
 
 
 # Object files for target HangMan
 HangMan_OBJECTS = \
 "CMakeFiles/HangMan.dir/main.cpp.o" \
-"CMakeFiles/HangMan.dir/systemMessages.cpp.o"
+"CMakeFiles/HangMan.dir/theMan.cpp.o"
 
 # External object files for target HangMan
 HangMan_EXTERNAL_OBJECTS =
 
 HangMan.exe: CMakeFiles/HangMan.dir/main.cpp.o
-HangMan.exe: CMakeFiles/HangMan.dir/systemMessages.cpp.o
+HangMan.exe: CMakeFiles/HangMan.dir/theMan.cpp.o
 HangMan.exe: CMakeFiles/HangMan.dir/build.make
 HangMan.exe: CMakeFiles/HangMan.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable HangMan.exe"
@@ -126,7 +126,7 @@ CMakeFiles/HangMan.dir/build: HangMan.exe
 .PHONY : CMakeFiles/HangMan.dir/build
 
 CMakeFiles/HangMan.dir/requires: CMakeFiles/HangMan.dir/main.cpp.o.requires
-CMakeFiles/HangMan.dir/requires: CMakeFiles/HangMan.dir/systemMessages.cpp.o.requires
+CMakeFiles/HangMan.dir/requires: CMakeFiles/HangMan.dir/theMan.cpp.o.requires
 
 .PHONY : CMakeFiles/HangMan.dir/requires
 
