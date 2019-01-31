@@ -17,7 +17,7 @@ int main() {
     vector<string> word_choice = {"apples", "bananas"};
 
 
-    hangManSetup();
+    Man* currentMan = hangManSetup();
 
     //process one word
     string choice = word_choice[1];
@@ -32,38 +32,47 @@ int main() {
 
     //Variables for users to input
     string input;
-    bool valid = true;
+    bool completed = false;
 
     cout << "Hangman! Your word has " << choice.size() << " characters. " << endl
         << guess << endl
         << "Start guessing! What's your guess? " << endl;
 
-    getline(cin, input);
+    while(currentMan || !completed){
 
-    cout << "You entered: " << input << endl;
+        getline(cin, input);
 
-    int found = choice.find(input);
-    if (found != string::npos){ //until end of the string, as a return vale means "no matches"
+        cout << "You entered: " << input << endl;
 
-        cout << "Yup! Letter " << input << " is at " << found << endl;
-        //Reveal all guesses
+        long found = choice.find(input);
+        if (found != string::npos){ //until end of the string, as a return vale means "no matches"
 
-        for (int i = 0; i < choice.size(); i++){
+            cout << "Yup! Letter " << input << " is at " << found << endl;
+            //Reveal all guesses
 
-            if ( input[0] == choice[i]){
+            for (int i = 0; i < choice.size(); i++){
 
-                guess[2 * i] = choice[i];
+                if ( input[0] == choice[i]){
+
+                    guess[2 * i] = choice[i];
+                }
             }
+
+            cout << guess << endl;
+
+        }
+        else{
+
+            cout << "Nope! Better luck next guess.\n";
+            //Insert one more hangman slot.
+            printHangManAsciiArt(currentMan);
+            currentMan = currentMan->getNext_stage();
+            cout << 7 - (currentMan->getStage()) << " chances left!" << endl;
         }
 
-        cout << guess << endl;
-
     }
-    else{
 
-        cout << "Nope! Better luck next guess.\n";
-        //Insert one more hangman slot.
-    }
+
 
     return 0;
 }

@@ -36,11 +36,22 @@ public:
         Man::next_man = next_man;
     }
 
+
+    int getStage() const {
+        return stage;
+    }
+
+    void setStage(int stage) {
+        Man::stage = stage;
+    }
+
 private:
+    int stage;
     string visual = "";
     Man* next_man = NULL;
 
 };
 
-void hangManSetup();
+Man* hangManSetup();
 void hangManDestruct();
+void printHangManAsciiArt(Man* thisMan);

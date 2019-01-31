@@ -5,7 +5,7 @@
 #include "theMan.hpp"
 
 
-void hangManSetup(){
+Man* hangManSetup(){
 
 
     string firstManVisual = " |\n |\n |\n |\n |\n |\n |\n";
@@ -34,6 +34,7 @@ void hangManSetup(){
     //Set the first ascii art
     Man* firstMan = new Man();
     firstMan->setVisual(firstManVisual);
+    firstMan->setStage(0);
 
     //Temp pointer for next linked list node
     Man* temp = firstMan;
@@ -43,6 +44,7 @@ void hangManSetup(){
         temp->setNext_stage(new Man());
         temp = temp->getNext_stage();
         temp->setVisual(manAsciiArt[x]);
+        temp->setStage(x+1);
     }
 
 
@@ -54,8 +56,15 @@ void hangManSetup(){
 //        temp = temp->getNext_stage();
 //
 //    }
-//
-//    temp=firstMan->getNext_stage();
+
+    return firstMan;
+}
+
+
+
+
+void hangManDestruct(){
+    //    temp=firstMan->getNext_stage();
 //
 //    while(temp){
 //
@@ -67,10 +76,7 @@ void hangManSetup(){
 
 }
 
+void printHangManAsciiArt(Man* thisMan){
 
-
-void hangManDestruct(){
-
-
-
+    cout << thisMan->getVisual() << endl;
 }
