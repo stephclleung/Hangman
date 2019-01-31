@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/hangManUtilities.cpp
+hangManUtilities.hpp
+/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/hangManUtilities.hpp
+
+/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/hangManUtilities.hpp
+iostream
+-
+string
+-
+fstream
+-
+theMan.hpp
+/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.hpp
+
 /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/main.cpp
 iostream
 -
@@ -15,8 +29,14 @@ vector
 -
 string
 -
+time.h
+-
+stdlib.h
+-
 theMan.hpp
 /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.hpp
+hangManUtilities.hpp
+/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/hangManUtilities.hpp
 
 /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.cpp
 theMan.hpp

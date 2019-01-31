@@ -80,6 +80,12 @@
          </MakeCommands>
       </Target>
       </Build>
+      <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/hangManUtilities.cpp">
+         <Option target="HangMan"/>
+      </Unit>
+      <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/hangManUtilities.hpp">
+         <Option target="HangMan"/>
+      </Unit>
       <Unit filename="/cygdrive/c/Users/DehMoi/CLionProjects/HangMan/main.cpp">
          <Option target="HangMan"/>
       </Unit>

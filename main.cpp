@@ -2,7 +2,13 @@
 #include <iomanip>
 #include <vector>
 #include <string>
+#include <time.h>
+#include <stdlib.h>
+
+
 #include "theMan.hpp"
+#include "hangManUtilities.hpp"
+
 
 using std::cout;
 using std::cin;
@@ -14,17 +20,21 @@ using std::endl;
 
 int main() {
 
-    vector<string> word_choice = {"apples", "bananas"};
+    //Container for words. Read from file and save to container
+    vector<string> word_choice;
+    getWordFromFile(&word_choice);
 
-
+    //Set up the first visual and link up the rest.
     Man* currentMan = hangManSetup();
 
-    //process one word
-    string choice = word_choice[1];
+    //Generate a word
+    srand(time(NULL));
+    string choice = word_choice[rand()%(word_choice.size())];
 
     // Create spaces for the guess word.
     string guess = "";
-    for (int i = 0; i < choice.size(); i++){
+    //for (int i = 0; i < choice.size(); i++){
+    for (auto chars : choice){
 
         guess.append("_ ");
 
@@ -34,15 +44,24 @@ int main() {
     string input;
     bool completed = false;
 
-    cout << "Hangman! Your word has " << choice.size() << " characters. " << endl
-        << guess << endl
-        << "Start guessing! What's your guess? " << endl;
+    cout << "Hangman! Your word has " << choice.size() << " characters. " << endl;
 
-    while(currentMan || !completed){
+    while(currentMan && !completed){
 
-        getline(cin, input);
+        input = userPrompts();
+        bool valid = false;
 
-        cout << "You entered: " << input << endl;
+        while(!valid){
+
+            cout << "You entered: " << input << endl;
+            valid = userInputCheck(input);
+            if(!valid){
+
+                cout << "Empty inputs not accepted. At least TRY not to kill the man yo...." << endl;
+                input = userPrompts();
+                valid = userInputCheck(input);
+            }
+        }
 
         long found = choice.find(input);
         if (found != string::npos){ //until end of the string, as a return vale means "no matches"
@@ -60,6 +79,14 @@ int main() {
 
             cout << guess << endl;
 
+            found = guess.find("_");
+            if ( found == string::npos ){
+
+                //Cannot find any more _, word is completed.
+                completed = true;
+            }
+
+
         }
         else{
 
@@ -72,6 +99,8 @@ int main() {
 
     }
 
+    gameOverHandling(currentMan, guess, choice);
+    hangManDestruct();
 
 
     return 0;

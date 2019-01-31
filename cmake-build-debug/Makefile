@@ -123,6 +123,33 @@ HangMan/fast:
 	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/build
 .PHONY : HangMan/fast
 
+hangManUtilities.o: hangManUtilities.cpp.o
+
+.PHONY : hangManUtilities.o
+
+# target to build an object file
+hangManUtilities.cpp.o:
+	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/hangManUtilities.cpp.o
+.PHONY : hangManUtilities.cpp.o
+
+hangManUtilities.i: hangManUtilities.cpp.i
+
+.PHONY : hangManUtilities.i
+
+# target to preprocess a source file
+hangManUtilities.cpp.i:
+	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/hangManUtilities.cpp.i
+.PHONY : hangManUtilities.cpp.i
+
+hangManUtilities.s: hangManUtilities.cpp.s
+
+.PHONY : hangManUtilities.s
+
+# target to generate assembly for a file
+hangManUtilities.cpp.s:
+	$(MAKE) -f CMakeFiles/HangMan.dir/build.make CMakeFiles/HangMan.dir/hangManUtilities.cpp.s
+.PHONY : hangManUtilities.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HangMan"
+	@echo "... hangManUtilities.o"
+	@echo "... hangManUtilities.i"
+	@echo "... hangManUtilities.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

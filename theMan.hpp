@@ -5,8 +5,6 @@
 #ifndef HANGMAN_SYSTEMMESSAGES_HPP
 #define HANGMAN_SYSTEMMESSAGES_HPP
 
-#endif //HANGMAN_SYSTEMMESSAGES_HPP
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -55,3 +53,5 @@ private:
 Man* hangManSetup();
 void hangManDestruct();
 void printHangManAsciiArt(Man* thisMan);
+
+#endif //HANGMAN_SYSTEMMESSAGES_HPP
