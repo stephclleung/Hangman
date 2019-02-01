@@ -33,29 +33,20 @@ Man* hangManSetup(){
 
     //Set the first ascii art
     Man* firstMan = new Man();
-    firstMan->setVisual(firstManVisual);
-    firstMan->setStage(0);
+    //firstMan->setVisual(firstManVisual);
+    //firstMan->setStage(0);
 
     //Temp pointer for next linked list node
     Man* temp = firstMan;
     for (int x = 0; x < 7; x++){
 
         //Make all dem asciis
+        temp->setVisual(manAsciiArt[x]);
+        temp->setStage(x);
         temp->setNext_stage(new Man());
         temp = temp->getNext_stage();
-        temp->setVisual(manAsciiArt[x]);
-        temp->setStage(x+1);
+
     }
-
-
-//    temp = firstMan;
-//    while(temp){
-//
-//        cout << temp->getVisual() << endl;
-//
-//        temp = temp->getNext_stage();
-//
-//    }
 
     return firstMan;
 }

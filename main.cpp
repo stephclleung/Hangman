@@ -27,12 +27,14 @@ int main() {
     //Set up the first visual and link up the rest.
     Man* currentMan = hangManSetup();
 
+    printVisual(currentMan);
+
     //Generate a word
     srand(time(NULL));
     string choice = word_choice[rand()%(word_choice.size())];
 
     // Create spaces for the guess word.
-    string guess = "";
+    string guess;
     //for (int i = 0; i < choice.size(); i++){
     for (auto chars : choice){
 
@@ -63,21 +65,49 @@ int main() {
             }
         }
 
+        // process in put HERE
+        // needs to differentiate between single char
+        // and
+        // whole ass strings
+
         long found = choice.find(input);
         if (found != string::npos){ //until end of the string, as a return vale means "no matches"
 
-            cout << "Yup! Letter " << input << " is at " << found << endl;
+            //cout << "Yup! Letter " << input << " is at " << found << endl;
             //Reveal all guesses
+//
+//            for (int i = 0; i < choice.size(); i++){
+//
+//                if ( input[i] == choice[i]){
+//
+//                    guess[2 * i] = choice[i];
+//                }
+//            }
+//
+//            cout << guess << endl;
+            if (input.size() == 1) {
 
-            for (int i = 0; i < choice.size(); i++){
+                for (int i = found; i < choice.size(); i++) {
 
-                if ( input[0] == choice[i]){
+                    if( input[0] == choice[i]){
+
+                        cout << guess[2*i] << " <---- before" << endl;
+                        guess[2 * i] = choice[i];
+                    }
+                }
+                cout << guess << " <---- after" << endl;
+
+            }
+            else if (input.size() == choice.size()){
+
+                //whole word matches
+                for (int i = 0; i < choice.size(); i++) {
 
                     guess[2 * i] = choice[i];
                 }
             }
 
-            cout << guess << endl;
+            cout << "Good guess! Updating your guess to : " << guess << endl;
 
             found = guess.find("_");
             if ( found == string::npos ){
@@ -85,6 +115,7 @@ int main() {
                 //Cannot find any more _, word is completed.
                 completed = true;
             }
+
 
 
         }
@@ -99,6 +130,8 @@ int main() {
 
     }
 
+    cout << "Before end game" << endl;
+    cout << choice << endl;
     gameOverHandling(currentMan, guess, choice);
     hangManDestruct();
 

@@ -45,6 +45,15 @@ void printWords(vector<string> word_choice){
         cout << word << endl;
     }
 
+}
+
+void printVisual(Man* currentMan){
+
+    while(currentMan){
+
+        printHangManAsciiArt(currentMan);
+        currentMan = currentMan->getNext_stage();
+    }
 
 }
 

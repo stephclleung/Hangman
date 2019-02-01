@@ -18,6 +18,7 @@ bool userInputCheck(string input);
 void getWordFromFile(vector<string>* word_choice );
 void gameOverHandling(Man* currentMan, string guess, string choice);
 void printWords(vector<string> word_choice);
+void printVisual(Man* currentMan);
 
 
 #endif //HANGMAN_HANGMANUTILITIES_HPP
