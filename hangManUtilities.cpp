@@ -51,7 +51,11 @@ void printVisual(Man* currentMan){
 
     while(currentMan){
 
+        cout << "Stage " << currentMan->getStage() << endl;
+        cout << "||||||||||||||||||||||||||||||||||||||||||||||||" <<endl;
         printHangManAsciiArt(currentMan);
+        cout << "||||||||||||||||||||||||||||||||||||||||||||||||" <<endl;
+
         currentMan = currentMan->getNext_stage();
     }
 

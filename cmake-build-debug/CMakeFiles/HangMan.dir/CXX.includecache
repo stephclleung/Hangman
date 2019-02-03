@@ -33,6 +33,10 @@ time.h
 -
 stdlib.h
 -
+algorithm
+-
+cctype
+-
 theMan.hpp
 /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.hpp
 hangManUtilities.hpp

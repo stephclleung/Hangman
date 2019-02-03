@@ -4,7 +4,8 @@
 #include <string>
 #include <time.h>
 #include <stdlib.h>
-
+#include <algorithm> //std::transform
+#include <cctype>
 
 #include "theMan.hpp"
 #include "hangManUtilities.hpp"
@@ -16,6 +17,8 @@ using std::vector;
 using std::string;
 using std::getline;
 using std::endl;
+using std::tolower;
+using std::transform;
 
 
 int main() {
@@ -26,7 +29,6 @@ int main() {
 
     //Set up the first visual and link up the rest.
     Man* currentMan = hangManSetup();
-
     printVisual(currentMan);
 
     //Generate a word
@@ -65,38 +67,27 @@ int main() {
             }
         }
 
-        // process in put HERE
-        // needs to differentiate between single char
-        // and
-        // whole ass strings
+        //Case sensitivity:
+        transform(input.begin(),
+                input.end(),
+                input.begin(),
+                [](unsigned char const &c){
+                    return :: tolower(c);
+        });
+
 
         long found = choice.find(input);
         if (found != string::npos){ //until end of the string, as a return vale means "no matches"
 
-            //cout << "Yup! Letter " << input << " is at " << found << endl;
-            //Reveal all guesses
-//
-//            for (int i = 0; i < choice.size(); i++){
-//
-//                if ( input[i] == choice[i]){
-//
-//                    guess[2 * i] = choice[i];
-//                }
-//            }
-//
-//            cout << guess << endl;
             if (input.size() == 1) {
 
                 for (int i = found; i < choice.size(); i++) {
 
                     if( input[0] == choice[i]){
 
-                        cout << guess[2*i] << " <---- before" << endl;
                         guess[2 * i] = choice[i];
                     }
                 }
-                cout << guess << " <---- after" << endl;
-
             }
             else if (input.size() == choice.size()){
 
@@ -125,13 +116,16 @@ int main() {
             //Insert one more hangman slot.
             printHangManAsciiArt(currentMan);
             currentMan = currentMan->getNext_stage();
-            cout << 7 - (currentMan->getStage()) << " chances left!" << endl;
+            if(currentMan){
+                //If still have a number of guesses:
+                cout << 7 - (currentMan->getStage()) << " chances left!" << endl;
+            }
+
         }
 
     }
 
-    cout << "Before end game" << endl;
-    cout << choice << endl;
+
     gameOverHandling(currentMan, guess, choice);
     hangManDestruct();
 

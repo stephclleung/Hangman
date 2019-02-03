@@ -27,7 +27,10 @@ public:
     }
 
     Man *getNext_stage() const {
-        return next_man;
+        if(next_man){
+            return next_man;
+        }
+        return NULL;
     }
 
     void setNext_stage(Man *next_man) {
