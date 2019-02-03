@@ -13,9 +13,21 @@ string userPrompts(){
     return input;
 }
 
-bool userInputCheck(string input){
+void userInputProcess(string *input, string instruction) {
 
-   return !input.empty();
+    while(input->empty()){
+
+        cout << instruction << endl;
+        getline(cin, *input);
+    }
+
+    transform(input->begin(),
+              input->end(),
+              input->begin(),
+              [](unsigned char const &c){
+                  return :: tolower(c);
+              });
+
 }
 
 void getWordFromFile(vector<string>* word_choice){
@@ -69,6 +81,6 @@ void gameOverHandling(Man* currentMan, string guess, string choice){
     }
     else{
 
-        cout << "You used up all your chances! The answer was " << choice << endl;
+        cout << "You used up all your chances! The answer was " << choice << "." << endl;
     }
 }

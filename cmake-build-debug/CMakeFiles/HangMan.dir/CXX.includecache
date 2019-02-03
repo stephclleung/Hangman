@@ -17,6 +17,10 @@ string
 -
 fstream
 -
+algorithm
+-
+cctype
+-
 theMan.hpp
 /cygdrive/c/Users/DehMoi/CLionProjects/HangMan/theMan.hpp
 
